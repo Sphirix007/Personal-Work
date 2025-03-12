@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
+<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 
+<style>
+                            @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+</style>
+                
+                
 # Title of the app with a custom background
 st.markdown("""
     <style>
