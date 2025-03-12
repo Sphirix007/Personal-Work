@@ -64,3 +64,4 @@ ax.set_xticklabels(poll_df['Pokémon'], rotation=90)
 
 # Display the chart
 st.pyplot(fig)
+
