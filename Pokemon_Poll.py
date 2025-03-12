@@ -77,5 +77,5 @@ st.bar_chart(poll_df.set_index("Pokémon")["Votes"])
 
 # A cool footer
 st.markdown("---")
-st.markdown("Made with ❤️ by Me :) | Pokémon Fan 🧑‍💻")
+st.markdown("Made with ❤️ by Me :) | Pokémon Fan")
 
