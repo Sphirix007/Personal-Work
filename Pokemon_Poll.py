@@ -39,7 +39,7 @@ vote_button_style = """
         border: none;
     }
     .stButton>button:hover {
-        background-color: #FF4500;
+        background-color: #32cd32;
     }
     </style>
 """
