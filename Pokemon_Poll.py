@@ -85,7 +85,7 @@ st.write(
 )
 
 # Display results in a colorful bar chart
-st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FF4500")
+st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FFFFFF")
 
 # A cool footer with a background color and emoji
 st.markdown("""
