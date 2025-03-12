@@ -7,7 +7,7 @@ st.title("Pokémon Starter Poll 🗳️")
 # Add a custom heading and description
 st.markdown("""
 ### Vote for your favorite Pokémon starter!
-Choose your favorite from the options below. Let's see which one reigns supreme! 😎
+Choose your favorite from the options below. Let's see which one is the most popular!
 """)
 
 # List of starter Pokémon
