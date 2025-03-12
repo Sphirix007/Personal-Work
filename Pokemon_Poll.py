@@ -1,14 +1,22 @@
 import streamlit as st
 import pandas as pd
 
-# Title of the app
-st.title("Pokémon Starter Poll 🗳️")
-
-# Add a custom heading and description
+# Title of the app with a custom background
 st.markdown("""
-### Vote for your favorite Pokémon starter!
-Choose your favorite from the options below. Let's see which one is the most popular!
-""")
+    <style>
+        .stApp {
+            background-color: #F0F8FF;  /* Light Blue Background */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Title with an emoji and a gradient
+st.markdown("""
+    <h1 style="text-align: center; color: #FF6347; font-family: 'Helvetica';">
+        Pokémon Starter Poll 🗳️
+    </h1>
+    <p style="text-align: center; font-size: 18px; color: #FF4500;">Vote for your favorite Pokémon starter!</p>
+""", unsafe_allow_html=True)
 
 # List of starter Pokémon
 starters = [
@@ -27,19 +35,21 @@ starters = [
 if "poll_results" not in st.session_state:
     st.session_state.poll_results = {pokemon: 0 for pokemon in starters}
 
-# Custom vote button styling
+# Custom vote button styling with gradient background
 vote_button_style = """
     <style>
     .stButton>button {
-        background-color: #FF6347;
+        background: linear-gradient(to right, #FF6347, #FF4500);
         color: white;
         font-size: 16px;
         padding: 10px 24px;
         border-radius: 8px;
         border: none;
+        font-weight: bold;
     }
     .stButton>button:hover {
-        background-color: #FF4500;
+        background: linear-gradient(to right, #FF4500, #FF6347);
+        box-shadow: 0 4px 10px rgba(255, 69, 0, 0.5);
     }
     </style>
 """
@@ -50,33 +60,50 @@ selected_pokemon = st.radio(
     "Which is your favorite starter Pokémon?", 
     starters, 
     index=0, 
-    key="pokemon_radio"
+    key="pokemon_radio",
+    help="Click to select your favorite Pokémon starter! 🌟"
 )
 
-# Vote action
+# Vote action with custom button color
 if st.button("Vote"):
     st.session_state.poll_results[selected_pokemon] += 1
-    st.success(f"🎉 You voted for **{selected_pokemon}**!")
+    st.success(f"🎉 **You voted for {selected_pokemon}!**", icon="✅")
 
-# Display results as a styled dataframe and bar chart
-st.subheader("Poll Results")
+# Display results with colorful styling
+st.subheader("Poll Results", anchor="results")
 poll_df = pd.DataFrame(list(st.session_state.poll_results.items()), columns=["Pokémon", "Votes"])
 poll_df = poll_df.sort_values("Votes", ascending=False)
 
-# Style the DataFrame
+# Custom table styling with background and color
 st.write(
     poll_df.style.set_table_styles([
-        {'selector': 'thead th', 'props': [('background-color', '#FFEB3B'), ('color', 'black')]},
-        {'selector': 'tbody td', 'props': [('background-color', '#F4F4F4')]},
-        {'selector': 'tr:nth-child(odd)', 'props': [('background-color', '#EEEEEE')]},
+        {'selector': 'thead th', 'props': [('background-color', '#FFEB3B'), ('color', 'black'), ('font-weight', 'bold')]},
+        {'selector': 'tbody td', 'props': [('background-color', '#E0FFFF')]},
+        {'selector': 'tr:nth-child(odd)', 'props': [('background-color', '#F5F5F5')]},
+        {'selector': 'tr:nth-child(even)', 'props': [('background-color', '#FFFFFF')]},
     ])
 )
 
 # Display results in a colorful bar chart
-st.bar_chart(poll_df.set_index("Pokémon")["Votes"])
+st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FF4500")
 
-# A cool footer
-st.markdown("---")
-st.markdown("Made with ❤️ by Me:) ")
+# A cool footer with a background color and emoji
+st.markdown("""
+    <style>
+        .footer {
+            text-align: center;
+            font-size: 16px;
+            background-color: #FF6347;
+            padding: 10px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(255, 69, 0, 0.3);
+        }
+    </style>
+    <div class="footer">
+        Made with ❤️ by me :)
+    </div>
+""", unsafe_allow_html=True)
+
 
 
