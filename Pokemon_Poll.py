@@ -7,7 +7,7 @@ st.title("Pokémon Starter Poll 🗳️")
 # Add a custom heading and description
 st.markdown("""
 ### Vote for your favorite Pokémon starter!
-Choose your favorite from the options below. Let's see which one is the most popular!
+Choose your favorite from the options below. Let's see which one reigns supreme! 😎
 """)
 
 # List of starter Pokémon
@@ -31,7 +31,7 @@ if "poll_results" not in st.session_state:
 vote_button_style = """
     <style>
     .stButton>button {
-        background-color: #FFFFFF;
+        background-color: #FF6347;
         color: white;
         font-size: 16px;
         padding: 10px 24px;
@@ -39,7 +39,7 @@ vote_button_style = """
         border: none;
     }
     .stButton>button:hover {
-        background-color: #FF6347;
+        background-color: #FF4500;
     }
     </style>
 """
@@ -77,5 +77,6 @@ st.bar_chart(poll_df.set_index("Pokémon")["Votes"])
 
 # A cool footer
 st.markdown("---")
-st.markdown("Made with ❤️ by Me :) | Pokémon Fan")
+st.markdown("Made with ❤️ by Me:) ")
+
 
