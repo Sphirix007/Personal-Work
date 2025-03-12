@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# Title of the app with a custom background
+# Set the background color of the entire page (app)
 st.markdown("""
     <style>
         .stApp {
@@ -39,11 +39,11 @@ if "poll_results" not in st.session_state:
 vote_button_style = """
     <style>
     .stButton>button {
-        background: linear-gradient(to right, #50C878, #Ff6961, #89CFF0);
+        background: linear-gradient(to right, #FF6347, #FF4500);
         color: white;
         font-size: 16px;
-        padding: 10px 50px;
-        border-radius: 20px;
+        padding: 10px 24px;
+        border-radius: 8px;
         border: none;
         font-weight: bold;
     }
@@ -85,7 +85,7 @@ st.write(
 )
 
 # Display results in a colorful bar chart
-st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FFFFFF")
+st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FF4500")
 
 # A cool footer with a background color and emoji
 st.markdown("""
@@ -101,7 +101,7 @@ st.markdown("""
         }
     </style>
     <div class="footer">
-        Made with ❤️ by me :)
+        Made with ❤️ by [Your Name] | Pokémon Fan 🧑‍💻
     </div>
 """, unsafe_allow_html=True)
 
