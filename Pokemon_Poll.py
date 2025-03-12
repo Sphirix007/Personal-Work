@@ -42,8 +42,8 @@ vote_button_style = """
         background: linear-gradient(to right, #50C878, #Ff6961, #89CFF0);
         color: white;
         font-size: 16px;
-        padding: 10px 24px;
-        border-radius: 8px;
+        padding: 10px 50px;
+        border-radius: 20px;
         border: none;
         font-weight: bold;
     }
