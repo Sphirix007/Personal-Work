@@ -12,7 +12,7 @@ st.markdown("""
 
 # Title with an emoji and a gradient
 st.markdown("""
-    <h1 style="text-align: center; color: #FF6347; font-family: 'Helvetica';">
+    <h1 style="text-align: center; color: #FF6347; font-family: 'Pokemon Solid', sans-serif;">
         Pokémon Starter Poll 🗳️
     </h1>
     <p style="text-align: center; font-size: 18px; color: #FF4500;">Vote for your favorite Pokémon starter!</p>
