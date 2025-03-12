@@ -32,7 +32,7 @@ vote_button_style = """
     <style>
     .stButton>button {
         background-color: #FFFFFF;
-        color: grey;
+        color: white;
         font-size: 16px;
         padding: 10px 24px;
         border-radius: 8px;
