@@ -31,7 +31,7 @@ if "poll_results" not in st.session_state:
 vote_button_style = """
     <style>
     .stButton>button {
-        background-color: #FF6347;
+        background-color: #FFFFFF;
         color: white;
         font-size: 16px;
         padding: 10px 24px;
@@ -39,7 +39,7 @@ vote_button_style = """
         border: none;
     }
     .stButton>button:hover {
-        background-color: #32cd32;
+        background-color: #FF6347;
     }
     </style>
 """
