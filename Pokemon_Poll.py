@@ -39,7 +39,7 @@ if "poll_results" not in st.session_state:
 vote_button_style = """
     <style>
     .stButton>button {
-        background: linear-gradient(to right, #FF6347, #FF4500);
+        background: linear-gradient(to right, #50C878, #Ff6961, #89CFF0);
         color: white;
         font-size: 16px;
         padding: 10px 24px;
