@@ -104,3 +104,4 @@ st.markdown("""
         Made with ❤️ by me :)
     </div>
 """, unsafe_allow_html=True)
+
