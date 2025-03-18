@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px  # Import Plotly for Pie Chart
-
+               
 # Title of the app with a custom background
 st.markdown("""
     <style>
@@ -88,11 +87,6 @@ st.write(
 # Display results in a colorful bar chart
 st.bar_chart(poll_df.set_index("Pokémon")["Votes"], color="#FF4500")
 
-# **New Addition**: Display results as a Pie Chart using Plotly
-fig = px.pie(poll_df, names='Pokémon', values='Votes', title='Pokémon Starter Poll Results')
-fig.update_traces(textinfo='percent+label', pull=[0.1]*len(poll_df))  # Optional: "pull" for highlighting slices
-st.plotly_chart(fig)
-
 # A cool footer with a background color and emoji
 st.markdown("""
     <style>
@@ -110,7 +104,3 @@ st.markdown("""
         Made with ❤️ by me :)
     </div>
 """, unsafe_allow_html=True)
-
-
-
-
